@@ -1,6 +1,6 @@
 # 🚀 Ankush Kumar | Frontend Developer Portfolio
 
-🔗 **Live Demo:** [https://ankush-dev.netlify.app/](https://ankush-dev.netlify.app/)
+🔗 **Live Link:** [https://ankush-dev.netlify.app/](https://ankush-dev.netlify.app/)
 
 A modern, high-performance professional portfolio featuring a bold **Neo-Brutalist** design. This project showcases my skills, experience, and projects as a Frontend Developer with a focus on building responsive, user-centric web applications.
 

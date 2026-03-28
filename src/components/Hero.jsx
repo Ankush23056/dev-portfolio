@@ -42,7 +42,7 @@ export default function Hero() {
         <div className="flex flex-wrap gap-3 pt-4">
           <BrutalButton color="bg-yellow" href="#projects">View Projects</BrutalButton>
           <BrutalButton color="bg-blue" href="#contact">Get in Touch</BrutalButton>
-          <BrutalButton color="bg-white" href="/ankush-resume.pdf" download="Ankush_Resume.pdf">Download Resume</BrutalButton>
+          <BrutalButton color="bg-white" href="/resume-ankush.pdf" download="Ankush_Resume.pdf">Download Resume</BrutalButton>
         </div>
       </motion.div>
 

@@ -30,7 +30,7 @@ export default function Navbar() {
                 {link}
               </a>
             ))}
-            <BrutalButton color="bg-blue" href="/ankush-resume.pdf" download="Ankush_Resume.pdf">Resume</BrutalButton>
+            <BrutalButton color="bg-blue" href="/resume-ankush.pdf" download="Ankush_Resume.pdf">Resume</BrutalButton>
           </div>
 
           {/* Mobile Toggle */}
@@ -51,7 +51,7 @@ export default function Navbar() {
                 {link}
               </a>
             ))}
-            <BrutalButton color="bg-blue" className="w-full" href="/ankush-resume.pdf" download="Ankush_Resume.pdf">Download Resume</BrutalButton>
+            <BrutalButton color="bg-blue" className="w-full" href="/resume-ankush.pdf" download="Ankush_Resume.pdf">Download Resume</BrutalButton>
           </motion.div>
         )}
       </div>
