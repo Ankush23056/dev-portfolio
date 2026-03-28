@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@theme {
+  --color-paper: #FFFDF5;
+  --color-ink: #111111;
+  --color-yellow: #FFD84D;
+  --color-blue: #4DA6FF;
+  --color-pink: #FF6B6B;
+  --color-green: #4ade80;
+  
+  --font-sans: 'Space Grotesk', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-handwriting: 'Caveat', cursive;
+}
+
+@layer utilities {
+  .bg-grid {
+    background-color: var(--color-paper);
+    background-image: 
+      linear-gradient(rgba(17, 17, 17, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(17, 17, 17, 0.05) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+  
+  .brutal-shadow {
+    box-shadow: 6px 6px 0px var(--color-ink);
+  }
+  
+  .brutal-shadow-sm {
+    box-shadow: 3px 3px 0px var(--color-ink);
+  }
+  
+  .border-3 {
+    border-width: 3px;
+  }
+}
+
+html, body {
+  font-family: var(--font-body);
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-x: hidden;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera globally */
+::-webkit-scrollbar {
+  display: none;
+}
+
+h1, h2, h3, h4, h5, h6, .font-sans {
+  font-family: var(--font-sans);
+}
+
+.font-handwriting {
+  font-family: var(--font-handwriting);
+}
