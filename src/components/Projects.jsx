@@ -177,35 +177,28 @@ export default function Projects() {
                   </div>
 
                   {/* 6. Tech Stack pills — outline style */}
-                  <div className="flex flex-wrap gap-2">
-                    {project.stack.map((tech) => (
-                      <span
+                  <div className="flex flex-wrap gap-2 pt-2 pb-1">
+                    {project.stack.map((tech, i) => (
+                      <motion.span
                         key={tech}
-                        className="border-2 border-ink px-3 py-0.5 text-xs font-bold rounded-full bg-paper"
+                        whileHover={{ scale: 1.05, rotate: i % 2 === 0 ? -4 : 4 }}
+                        className="inline-block border-2 border-ink px-3 py-1 text-xs font-bold rounded-full bg-white shadow-[2px_2px_0px_#111111] cursor-default"
                       >
                         {tech}
-                      </span>
+                      </motion.span>
                     ))}
                   </div>
 
                   {/* 7. Buttons */}
                   <div className="flex flex-wrap gap-3 pt-1">
-                    <motion.a
-                      href={project.live}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      whileHover={{ y: -2, x: -2 }}
-                      whileTap={{ y: 0, x: 0 }}
-                      className="inline-block border-2 border-ink bg-ink text-white px-4 md:px-5 py-2 font-bold whitespace-nowrap"
-                      style={{ boxShadow: '6px 6px 0px #ffffff, 6px 6px 0px 2px #111111' }}
-                    >
+                    <BrutalButton color="bg-ink" shadow="shadow-[4px_4px_0px_#6b7280]" className="text-white" href={project.live}>
                       <span className="flex items-center gap-2">
                         <ExternalLink size={16} />
                         Live Demo
                       </span>
-                    </motion.a>
+                    </BrutalButton>
                     {project.github && project.github !== '#' && (
-                      <BrutalButton color="bg-white" href={project.github}>
+                      <BrutalButton color="bg-white" shadow="shadow-[4px_4px_0px_#111111]" href={project.github}>
                         <span className="flex items-center gap-2">
                           <Github size={16} />
                           Code
