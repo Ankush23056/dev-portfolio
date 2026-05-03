@@ -55,23 +55,31 @@ export default function GithubSection() {
             </div>
           </div>
 
-          {/* Live Contribution Graph */}
-          <motion.div 
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="border-2 border-ink p-4 rounded-lg bg-paper overflow-x-auto"
-          >
-            <p className="font-bold mb-4">Contribution Graph</p>
-            <div className="min-w-max">
-              <img 
-                src="https://ghchart.rshah.org/Ankush23056" 
-                alt="Ankush23056's Github Contribution Graph" 
-                className="w-full h-auto"
-              />
+          {/* Fake Contribution Graph */}
+          <div className="border-2 border-ink p-4 rounded-lg bg-paper overflow-x-auto">
+            <p className="font-bold mb-2">Contribution Graph</p>
+            <div className="flex gap-1 min-w-max">
+              {Array.from({ length: 52 }).map((_, col) => (
+                <div key={col} className="flex flex-col gap-1">
+                  {Array.from({ length: 7 }).map((_, row) => {
+                    const intensity = Math.random();
+                    let color = 'bg-white';
+                    if (intensity > 0.8) color = 'bg-green';
+                    else if (intensity > 0.6) color = 'bg-green/70';
+                    else if (intensity > 0.4) color = 'bg-green/40';
+                    else if (intensity > 0.2) color = 'bg-green/20';
+                    
+                    return (
+                      <div 
+                        key={`${col}-${row}`} 
+                        className={`w-3 h-3 rounded-sm border border-ink/10 ${color}`}
+                      />
+                    );
+                  })}
+                </div>
+              ))}
             </div>
-          </motion.div>
+          </div>
         </BrutalCard>
       </motion.div>
     </section>
