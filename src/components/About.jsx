@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import BrutalCard from './ui/BrutalCard';
 import BrutalBadge from './ui/BrutalBadge';
+import SectionHeading from './ui/SectionHeading';
 
 export default function About() {
   const highlights = ['React Development', 'Frontend UI', 'Responsive Design', 'Problem Solving'];
@@ -13,9 +14,7 @@ export default function About() {
         viewport={{ once: true }}
         className="relative"
       >
-        <div className="inline-block bg-yellow border-3 border-ink brutal-shadow px-6 py-2 mb-8 rotate-[-2deg]">
-          <h2 className="text-3xl font-black uppercase tracking-wider">About</h2>
-        </div>
+        <SectionHeading rotate="rotate-[-2deg]">About</SectionHeading>
 
         <BrutalCard className="max-w-4xl" rotation={1}>
           <div className="text-lg md:text-xl font-medium leading-relaxed space-y-6">

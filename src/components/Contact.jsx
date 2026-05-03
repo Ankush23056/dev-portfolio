@@ -1,12 +1,10 @@
-import { motion } from 'motion/react';
+import SectionHeading from './ui/SectionHeading';
 import { Mail, Phone, Linkedin, Github } from 'lucide-react';
 
 export default function Contact() {
   return (
     <section id="contact" className="scroll-mt-32">
-      <div className="inline-block bg-yellow border-3 border-ink brutal-shadow px-6 py-2 mb-12 rotate-[-2deg]">
-        <h2 className="text-3xl font-black uppercase tracking-wider">Contact</h2>
-      </div>
+      <SectionHeading rotate="rotate-[-2deg]">Contact</SectionHeading>
 
       <div className="max-w-4xl mx-auto">
         <motion.div

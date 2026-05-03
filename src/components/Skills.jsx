@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import StickyNote from './ui/StickyNote';
 import BrutalBadge from './ui/BrutalBadge';
+import SectionHeading from './ui/SectionHeading';
 import { Layout, Code2, Server, Database, Wrench, Lightbulb } from 'lucide-react';
 
 export default function Skills() {
@@ -57,9 +58,7 @@ export default function Skills() {
 
   return (
     <section id="skills" className="scroll-mt-32">
-      <div className="inline-block bg-yellow border-3 border-ink brutal-shadow px-6 py-2 mb-12 rotate-[1deg]">
-        <h2 className="text-3xl font-black uppercase tracking-wider">Skills</h2>
-      </div>
+      <SectionHeading rotate="rotate-[1deg]">Skills</SectionHeading>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {skillCategories.map((category, idx) => (

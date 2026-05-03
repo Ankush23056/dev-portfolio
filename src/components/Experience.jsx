@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import BrutalCard from "./ui/BrutalCard";
+import SectionHeading from "./ui/SectionHeading";
 
 export default function Experience() {
   const experiences = [
@@ -28,11 +29,9 @@ export default function Experience() {
 
   return (
     <section id="experience" className="scroll-mt-32">
-      <div className="inline-block bg-yellow border-3 border-ink brutal-shadow px-6 py-2 mb-12 rotate-[-1deg]">
-        <h2 className="text-3xl font-black uppercase tracking-wider">
-          Experience & Programs
-        </h2>
-      </div>
+      <SectionHeading rotate="rotate-[-1deg]">
+        Experience & Programs
+      </SectionHeading>
 
       <div className="space-y-6">
         {experiences.map((exp, idx) => (

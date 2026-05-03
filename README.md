@@ -1,44 +1,36 @@
 # 🚀 Ankush Kumar | Frontend Developer Portfolio
+🔗 **Live Link:** [https://dev-ankush.vercel.app/](https://dev-ankush.vercel.app/)
 
-🔗 **Live Link:** [https://ankush-dev.netlify.app/](https://ankush-dev.netlify.app/)
+A modern, high-performance professional portfolio featuring a bold Neo-Brutalist design. This project showcases my expertise in full-stack web development, specialized UI design, and multi-disciplinary AI integration.
 
-A modern, high-performance professional portfolio featuring a bold **Neo-Brutalist** design. This project showcases my skills, experience, and projects as a Frontend Developer with a focus on building responsive, user-centric web applications.
+## 🏗️ Technical Pillars
 
----
-
-## ✨ Key Features
-
-- 🎨 **Neo-Brutalist UI**: A striking design aesthetic with high-contrast colors, bold shadows, and playful typography.
-- 📱 **Fully Responsive**: Optimized for all devices, from mobile phones to large desktop monitors.
-- 🎭 **Interactive Animations**: Powered by **Framer Motion** for smooth scroll reveals, floating elements, and button micro-interactions.
-- 📊 **Dynamic Sections**:
-  - **Hero**: Introduction with interactive 3D-feeling elements.
-  - **About**: Professional background and focus areas.
-  - **Skills**: Comprehensive list of technical expertise.
-  - **Projects**: Showcase of key work with links to live demos and repositories.
-  - **GitHub Integration**: Displays current GitHub activity and statistics.
-  - **Contact**: Direct links to Email, Phone, LinkedIn, and GitHub for easy recruitment.
-- 📜 **Scroll Progress**: Built-in visual indicator for reading progress.
-
----
+- **🎨 Neo-Brutalist & Tactical Design**: A striking "Beastmode" aesthetic featuring high-contrast colors, bold shadows, and high-density information layouts.
+- **🤖 Multi-Model AI Integration**: Leverages Groq-powered agents, Gemini API, and Exa AI parallel queries for structured data extraction and real-time architectural analysis.
+- **⚙️ Dynamic Theme Engine**: Implemented a custom mapping system that adapts card backgrounds to project brand colors (e.g., `#0a0f1e` for OfferVerify), eliminating letterboxing for a seamless edge-to-edge UI.
+- **📱 Mobile-First Engineering**: Optimized for performance with responsive grid layouts, ensuring complex data visualizations and "Featured" badges remain perfectly aligned on all devices.
 
 ## 🛠️ Tech Stack
 
-### Core
-
-- **React 19**: Modern UI library for building component-based interfaces.
-- **Vite**: Next-generation frontend tooling for an ultra-fast development experience.
-- **JavaScript (ES6+)**: Core logic and interactivity.
+### Core & State
+- **React 19**: Modern UI library utilizing a component-based architecture.
+- **Vite**: Next-generation tooling for optimized development and production builds.
+- **Zustand**: Lightweight state management for handling complex dashboard logic.
 
 ### Styling & Layout
+- **Tailwind CSS v4**: Utility-first framework for rapid, "tactical" UI development.
+- **Framer Motion**: Advanced micro-interactions and scroll-synchronized animations.
 
-- **Tailwind CSS v4**: Utility-first CSS framework for rapid UI development and advanced styling.
-- **Neo-Brutalism Design Patterns**: Custom shadow utilities and layout techniques.
+### Backend & Real-time
+- **Node.js & Socket.io**: For real-time collaborative features and P2P synchronization.
+- **Redis & Upstash**: Robust data persistence and caching layers.
 
-### Icons & Animations
+## 🌟 Featured Projects
 
-- **Lucide React**: Clean, consistent SVG icons.
-- **Framer Motion (Motion/React)**: Industry-standard animation library for React.
+- **Architex**: A real-time collaborative architectural design suite with a custom AI architect and P2P synchronization.
+- **OfferVerify**: An AI-powered tool built to analyze job offer legitimacy through parallel data extraction queries.
+- **BasePoint – Modern Budgeting Coach**: A financial dashboard featuring specialized income tracking and responsive trend analysis.
+- **FairShare**: Full-stack expense-sharing app utilizing a greedy debt settlement algorithm.
 
 ---
 
@@ -47,51 +39,40 @@ A modern, high-performance professional portfolio featuring a bold **Neo-Brutali
 To run this project locally, follow these steps:
 
 ### Prerequisites
-
 - [Node.js](https://nodejs.org/) (v18.x or higher recommended)
 - npm or yarn
 
 ### Steps
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/Ankush23056/Ankush-Portfolio.git
+   cd Ankush-Portfolio
+   ```
+2. **Install Dependencies**
+   ```bash
+   npm install
+   ```
+3. **Start Development Server**
+   ```bash
+   npm run dev
+   ```
+   The site will be available at `http://localhost:5173`.
 
-1.  **Clone the Repository**
-
-    ```bash
-    git clone https://github.com/Ankush23056/Ankush-Portfolio.git
-    cd Ankush-Portfolio
-    ```
-
-2.  **Install Dependencies**
-
-    ```bash
-    npm install
-    ```
-
-3.  **Start Development Server**
-
-    ```bash
-    npm run dev
-    ```
-
-    The site will be available at `http://localhost:3000`.
-
-4.  **Build for Production**
-    ```bash
-    npm run build
-    ```
+4. **Build for Production**
+   ```bash
+   npm run build
+   ```
 
 ---
 
 ## 📱 Responsiveness
-
 The portfolio is designed with a **mobile-first approach**:
-
 - **Mobile**: Single-column layout with optimized spacing and touch-friendly buttons.
 - **Tablet/Desktop**: Multi-column grids and expanded navigation for a premium experience.
 
 ---
 
 ## 📬 Contact & Hire Me
-
 I'm currently open to new opportunities and collaborations!
 
 - 📧 **Email**: [ankush5810kumar@gmail.com](mailto:ankush5810kumar@gmail.com)
@@ -100,5 +81,4 @@ I'm currently open to new opportunities and collaborations!
 - 🐙 **GitHub**: [@Ankush23056](https://github.com/Ankush23056)
 
 ---
-
-Developed with by **Ankush Kumar**
+Developed with ❤️ by **Ankush Kumar**
