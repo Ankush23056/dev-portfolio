@@ -17,6 +17,7 @@ const projects = [
     stack: ['React', 'Node.js', 'Exa AI', 'Groq'],
     live: 'https://offer-verify.vercel.app/',
     github: 'https://github.com/Ankush23056/OfferVerify.git',
+    screenshot: '/assets/offerverify.png',
     thumbColor: 'bg-pink',
     rotation: -1,
   },
@@ -32,6 +33,7 @@ const projects = [
     stack: ['React', 'Node.js', 'Socket.io', 'Redis', 'Canvas API'],
     live: 'https://architex-whiteboard.vercel.app/',
     github: 'https://github.com/Ankush23056/Architex.git',
+    screenshot: '/assets/architex.png',
     thumbColor: 'bg-yellow',
     rotation: 1,
   },
@@ -47,6 +49,7 @@ const projects = [
     stack: ['React', 'Node.js', 'Express', 'MySQL', 'Tailwind CSS'],
     live: 'https://fairsharre.netlify.app/',
     github: 'https://github.com/Ankush23056/FairShare_Smart-split.git',
+    screenshot: '/assets/fairshare.png',
     thumbColor: 'bg-blue',
     rotation: -1,
   },
@@ -61,6 +64,7 @@ const projects = [
     stack: ['React', 'Python', 'FastAPI', 'TensorFlow', 'Tailwind CSS'],
     live: 'https://crisis-ai.netlify.app/',
     github: 'https://github.com/Ankush23056/Crisis_Ai.git',
+    screenshot: '/assets/crisisai.jpeg',
     thumbColor: 'bg-pink',
     rotation: 1,
   },
@@ -75,6 +79,7 @@ const projects = [
     stack: ['React', 'Zustand', 'IndexedDB', 'Recharts', 'PWA'],
     live: 'https://base-point.vercel.app/',
     github: 'https://github.com/Ankush23056/BasePoint.git',
+    screenshot: '/assets/basepoint.png',
     thumbColor: 'bg-yellow',
     rotation: -1,
   },
@@ -89,6 +94,7 @@ const projects = [
     stack: ['HTML5', 'CSS3', 'Tailwind CSS', 'JavaScript', 'LocalStorage'],
     live: 'https://taskwarrior.netlify.app/',
     github: 'https://github.com/Ankush23056/taskwarrior.git',
+    screenshot: '/assets/taskwarrior.png',
     thumbColor: 'bg-blue',
     rotation: 1,
   },
@@ -131,16 +137,21 @@ export default function Projects() {
               {/* Two-column grid */}
               <div className="flex flex-col md:flex-row gap-8 items-stretch">
 
-                {/* ── LEFT: Thumbnail placeholder ── */}
+                {/* ── LEFT: Screenshot thumbnail ── */}
                 <div
                   className={`
                     w-full md:w-[38%] min-h-[220px] aspect-video
-                    ${project.thumbColor}
                     border-3 border-ink brutal-shadow-sm rounded-lg
-                    flex items-center justify-center
                     relative overflow-hidden shrink-0
                   `}
                 >
+                  {/* Real screenshot */}
+                  <img
+                    src={project.screenshot}
+                    alt={`${project.title} screenshot`}
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
+
                   {/* Featured Badge */}
                   {project.featured && (
                     <div className="absolute top-4 left-4 z-20 inline-flex items-center gap-1.5 px-3 py-1 rounded-full border-2 border-ink shadow-[2px_2px_0px_#111111] bg-[#fef08a] font-bold text-sm text-[#713f12]">
@@ -148,14 +159,6 @@ export default function Projects() {
                       Featured
                     </div>
                   )}
-
-                  <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-ink to-transparent" />
-                  <span className="font-black text-3xl text-ink/40 rotate-[-6deg] select-none px-4 text-center">
-                    {project.title}
-                  </span>
-                  {/* Tape corners */}
-                  <div className="absolute -top-2 left-6 w-10 h-5 bg-white/60 border border-ink/20 rotate-[-3deg]" />
-                  <div className="absolute -bottom-2 right-6 w-10 h-5 bg-white/60 border border-ink/20 rotate-[-3deg]" />
                 </div>
 
                 {/* ── RIGHT: Content ── */}
