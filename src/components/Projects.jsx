@@ -18,6 +18,7 @@ const projects = [
     live: 'https://offer-verify.vercel.app/',
     github: 'https://github.com/Ankush23056/OfferVerify.git',
     screenshot: '/assets/offerverify.png',
+    bgColor: '#060813',
     thumbColor: 'bg-pink',
     rotation: -1,
   },
@@ -34,6 +35,7 @@ const projects = [
     live: 'https://architex-whiteboard.vercel.app/',
     github: 'https://github.com/Ankush23056/Architex.git',
     screenshot: '/assets/architex.png',
+    bgColor: '#050505',
     thumbColor: 'bg-yellow',
     rotation: 1,
   },
@@ -50,6 +52,7 @@ const projects = [
     live: 'https://fairsharre.netlify.app/',
     github: 'https://github.com/Ankush23056/FairShare_Smart-split.git',
     screenshot: '/assets/fairshare.png',
+    bgColor: '#f3f4f6',
     thumbColor: 'bg-blue',
     rotation: -1,
   },
@@ -65,6 +68,7 @@ const projects = [
     live: 'https://crisis-ai.netlify.app/',
     github: 'https://github.com/Ankush23056/Crisis_Ai.git',
     screenshot: '/assets/crisisai.jpeg',
+    bgColor: '#ffffff',
     thumbColor: 'bg-pink',
     rotation: 1,
   },
@@ -80,6 +84,7 @@ const projects = [
     live: 'https://base-point.vercel.app/',
     github: 'https://github.com/Ankush23056/BasePoint.git',
     screenshot: '/assets/basepoint.png',
+    bgColor: '#f8f9fa',
     thumbColor: 'bg-yellow',
     rotation: -1,
   },
@@ -95,6 +100,7 @@ const projects = [
     live: 'https://taskwarrior.netlify.app/',
     github: 'https://github.com/Ankush23056/taskwarrior.git',
     screenshot: '/assets/taskwarrior.png',
+    bgColor: '#0b141a',
     thumbColor: 'bg-blue',
     rotation: 1,
   },
@@ -143,14 +149,15 @@ export default function Projects() {
                     w-full md:w-[38%] min-h-[220px] aspect-video
                     border-3 border-ink brutal-shadow-sm rounded-lg
                     relative overflow-hidden shrink-0
-                    bg-ink
+                    p-4
                   `}
+                  style={{ backgroundColor: project.bgColor }}
                 >
                   {/* Real screenshot */}
                   <img
                     src={project.screenshot}
                     alt={`${project.title} screenshot`}
-                    className="absolute inset-0 w-full h-full object-contain"
+                    className="w-full h-full object-contain"
                   />
 
                   {/* Featured Badge — pinned to container top-left */}
