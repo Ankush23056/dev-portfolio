@@ -1,12 +1,13 @@
 import { motion } from 'motion/react';
 import BrutalCard from './ui/BrutalCard';
 import BrutalButton from './ui/BrutalButton';
-import { ExternalLink, Github, Zap } from 'lucide-react';
+import { ExternalLink, Github, Zap, Star } from 'lucide-react';
 
 /* ─── Project Data ──────────────────────────────────────────────────── */
 const projects = [
   {
     title: 'OfferVerify',
+    featured: true,
     type: 'PERSONAL PROJECT',
     oneLiner: 'AI-Powered Protection Against Fake Job Offers.',
     origin: 'Built after I got scammed. No free tool existed.',
@@ -21,6 +22,7 @@ const projects = [
   },
   {
     title: 'Architex',
+    featured: true,
     type: 'REAL-TIME / COLLABORATIVE',
     oneLiner: 'Real-Time Collaborative Diagramming for Engineering Teams.',
     origin: 'What if Figma met system design, in real-time?',
@@ -35,6 +37,7 @@ const projects = [
   },
   {
     title: 'FairShare',
+    featured: true,
     type: 'FULL-STACK',
     oneLiner: 'Smart Expense Sharing with Optimized Settlements.',
     origin: 'Splitting bills fairly is a math problem. I solved it properly.',
@@ -70,7 +73,7 @@ const projects = [
     description:
       'Budget tracker with category-level spend limits, trend charts, and offline support — so your finances are visible even without a connection.',
     stack: ['React', 'Zustand', 'IndexedDB', 'Recharts', 'PWA'],
-    live: 'https://basepoiint.netlify.app/',
+    live: 'https://base-point.vercel.app/',
     github: 'https://github.com/Ankush23056/BasePoint.git',
     thumbColor: 'bg-yellow',
     rotation: -1,
@@ -124,7 +127,7 @@ export default function Projects() {
             viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 0.45, delay: idx * 0.06, ease: 'easeOut' }}
           >
-            <BrutalCard rotation={project.rotation} className="bg-white">
+            <BrutalCard rotation={project.rotation} className="bg-white" borderWidth={project.featured ? 'border-[5px]' : 'border-3'}>
               {/* Two-column grid */}
               <div className="flex flex-col md:flex-row gap-8 items-stretch">
 
@@ -138,6 +141,14 @@ export default function Projects() {
                     relative overflow-hidden shrink-0
                   `}
                 >
+                  {/* Featured Badge */}
+                  {project.featured && (
+                    <div className="absolute top-4 left-4 z-20 inline-flex items-center gap-1.5 px-3 py-1 rounded-full border-2 border-ink shadow-[2px_2px_0px_#111111] bg-[#fef08a] font-bold text-sm text-[#713f12]">
+                      <Star size={16} fill="#eab308" strokeWidth={0} />
+                      Featured
+                    </div>
+                  )}
+
                   <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-ink to-transparent" />
                   <span className="font-black text-3xl text-ink/40 rotate-[-6deg] select-none px-4 text-center">
                     {project.title}
