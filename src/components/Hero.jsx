@@ -4,7 +4,7 @@ import { Code, Terminal, Save } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section id="home" className="flex flex-col md:flex-row items-center justify-between gap-12 pt-0 md:pt-4 pb-16">
+    <section id="home" className="flex flex-col md:flex-row items-center justify-between gap-12 pt-0 md:pt-4 pb-4">
       <motion.div 
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
@@ -35,9 +35,37 @@ export default function Hero() {
           Frontend Developer | React & JavaScript
         </h2>
         
-        <p className="text-lg max-w-xl font-medium leading-relaxed">
-          Frontend Developer focused on building fast, responsive, and user-friendly web applications using React, JavaScript, and modern frontend technologies.
-        </p>
+        <div className="flex flex-col max-w-xl pt-2 pb-2 space-y-[-8px]">
+          <motion.div 
+            animate={{ y: [-1, 1, -1] }} 
+            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+            className="bg-white border-2 border-ink shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] p-2 px-4 md:p-3 md:px-5 rotate-[-2deg] self-start relative z-10"
+          >
+            <p className="text-lg md:text-xl font-bold leading-tight">
+              I'm a developer who enjoys building products
+            </p>
+          </motion.div>
+          
+          <motion.div 
+            animate={{ y: [1, -1, 1] }} 
+            transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+            className="bg-white border-2 border-ink shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] p-2 px-4 md:p-2 md:px-5 rotate-[1deg] self-center relative z-20"
+          >
+            <p className="text-base md:text-lg font-medium leading-tight">
+              that <mark className="bg-yellow text-ink font-bold px-1">solve real problems</mark>...
+            </p>
+          </motion.div>
+          
+          <motion.div 
+            animate={{ y: [-1, 1, -1] }} 
+            transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+            className="bg-white border-2 border-ink shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] p-2 px-4 md:p-2 md:px-5 rotate-[-1deg] self-end relative z-30"
+          >
+            <p className="text-base md:text-lg font-medium leading-tight">
+              creating things that <mark className="bg-yellow text-ink font-bold px-1">actually matter</mark>.
+            </p>
+          </motion.div>
+        </div>
         
         <div className="flex flex-wrap gap-3 pt-4">
           <BrutalButton color="bg-yellow" href="#projects">View Projects</BrutalButton>

@@ -1,3 +1,4 @@
+import { motion } from 'motion/react';
 import SectionHeading from './ui/SectionHeading';
 import { Mail, Phone, Linkedin, Github } from 'lucide-react';
 

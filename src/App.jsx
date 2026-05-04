@@ -15,7 +15,7 @@ export default function App() {
     <div className="min-h-screen bg-grid font-body text-ink selection:bg-yellow selection:text-ink">
       <ScrollProgress />
       <Navbar />
-      <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-12 space-y-32">
+      <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-12 space-y-20 md:space-y-28">
         <Hero />
         <About />
         <Skills />
