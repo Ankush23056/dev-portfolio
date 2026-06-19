@@ -27,10 +27,10 @@ A modern, high-performance professional portfolio featuring a bold Neo-Brutalist
 
 ## 🌟 Featured Projects
 
-- **Architex**: A real-time collaborative architectural design suite with a custom AI architect and P2P synchronization.
 - **OfferVerify**: An AI-powered tool built to analyze job offer legitimacy through parallel data extraction queries.
-- **BasePoint – Modern Budgeting Coach**: A financial dashboard featuring specialized income tracking and responsive trend analysis.
+- **Architex**: A real-time collaborative architectural design suite with a custom AI architect and P2P synchronization.
 - **FairShare**: Full-stack expense-sharing app utilizing a greedy debt settlement algorithm.
+- **BasePoint – Modern Budgeting Coach**: A financial dashboard featuring specialized income tracking and responsive trend analysis.
 
 ---
 
@@ -81,4 +81,4 @@ I'm currently open to new opportunities and collaborations!
 - 🐙 **GitHub**: [@Ankush23056](https://github.com/Ankush23056)
 
 ---
-Developed with ❤️ by **Ankush Kumar**
+Developed with by **Ankush Kumar**
