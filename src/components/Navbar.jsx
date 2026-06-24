@@ -13,7 +13,7 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const links = ['About', 'Skills', 'Projects', 'Education', 'GitHub', 'Contact'];
+  const links = ['About', 'Skills', 'Experience', 'Projects', 'Education', 'GitHub', 'Contact'];
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'py-2' : 'py-4'}`}>

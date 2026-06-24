@@ -2,9 +2,10 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
 import Skills from './components/Skills';
+import Experience from './components/Experience';
 import Projects from './components/Projects';
 import Education from './components/Education';
-import Experience from './components/Experience';
+import Programs from './components/Programs';
 import GithubSection from './components/GithubSection';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -19,9 +20,10 @@ export default function App() {
         <Hero />
         <About />
         <Skills />
+        <Experience />
         <Projects />
         <Education />
-        <Experience />
+        <Programs />
         <GithubSection />
         <Contact />
       </main>
