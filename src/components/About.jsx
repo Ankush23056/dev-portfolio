@@ -3,7 +3,7 @@ import BrutalBadge from './ui/BrutalBadge';
 import SectionHeading from './ui/SectionHeading';
 
 export default function About() {
-  const highlights = ['React Development', 'Frontend UI', 'Responsive Design', 'Problem Solving'];
+  const highlights = ['Full-Stack Development', 'PMO & Agile', 'UI/UX & Frontend', 'Problem Solving'];
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -54,13 +54,13 @@ export default function About() {
             className="p-6 md:p-8 text-lg md:text-xl font-medium leading-relaxed space-y-6"
           >
             <motion.p variants={itemVariants}>
-              I’m a developer who enjoys building products that <mark className="bg-yellow text-ink font-bold px-1 py-0.5">solve real problems</mark>, not just showcase features. I’m drawn to ideas that involve decision-making, real-time interaction, or improving everyday experiences through thoughtful design.
+              I'm a software developer who also runs project delivery. At SportsNext India, I build websites, admin systems and SEO tools while managing sprints, Jira tickets and stakeholder reports for a 4-member team.
             </motion.p>
             <motion.p variants={itemVariants}>
-              I like turning complex problems into simple, usable solutions, whether it’s optimizing how things work behind the scenes or making interfaces feel intuitive. Lately, I’ve been exploring ways to build systems that are not only functional, but <mark className="bg-yellow text-ink font-bold px-1 py-0.5">genuinely helpful</mark> in people’s daily lives.
+              I enjoy building products that <mark className="bg-yellow text-ink font-bold px-1 py-0.5">solve real problems</mark> and turning complex problems into simple, usable solutions, from the logic behind the scenes to interfaces that feel <mark className="bg-yellow text-ink font-bold px-1 py-0.5">genuinely intuitive</mark>.
             </motion.p>
             <motion.p variants={itemVariants}>
-              I’m always learning, building, and refining — with a focus on creating things that actually matter.
+              I'm a Computer Engineering graduate from the University of Mumbai, now pursuing an MBA in Business Analytics at NMIMS, because I want to understand the business behind what gets built.
             </motion.p>
           </motion.div>
 

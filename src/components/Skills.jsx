@@ -2,7 +2,7 @@ import { motion } from 'motion/react';
 import StickyNote from './ui/StickyNote';
 import BrutalBadge from './ui/BrutalBadge';
 import SectionHeading from './ui/SectionHeading';
-import { Layout, Code2, Server, Database, Wrench, Lightbulb } from 'lucide-react';
+import { Layout, Code2, Server, Database, Wrench, Lightbulb, ClipboardList } from 'lucide-react';
 
 export default function Skills() {
   const skillCategories = [
@@ -12,7 +12,7 @@ export default function Skills() {
       color: 'bg-white',
       tapeColor: 'bg-blue/50',
       rotation: -2,
-      skills: ['HTML5', 'CSS3', 'Tailwind CSS', 'React.js', 'Responsive Design']
+      skills: ['HTML5', 'CSS3', 'Tailwind CSS', 'React.js', 'Next.js', 'Responsive Design', 'UI/UX Design']
     },
     {
       title: 'LANGUAGES',
@@ -28,7 +28,7 @@ export default function Skills() {
       color: 'bg-white',
       tapeColor: 'bg-pink/50',
       rotation: -1,
-      skills: ['Node.js', 'Express.js (basic)']
+      skills: ['Node.js', 'Express.js', 'PHP']
     },
     {
       title: 'DATABASE',
@@ -36,7 +36,7 @@ export default function Skills() {
       color: 'bg-white',
       tapeColor: 'bg-green/50',
       rotation: 2,
-      skills: ['SQL']
+      skills: ['MySQL', 'MongoDB', 'PostgreSQL', 'Redis']
     },
     {
       title: 'TOOLS',
@@ -44,7 +44,15 @@ export default function Skills() {
       color: 'bg-white',
       tapeColor: 'bg-purple-400/50',
       rotation: -2,
-      skills: ['Git', 'GitHub', 'Vercel', 'Netlify', 'Render', 'Chrome DevTools']
+      skills: ['Git', 'GitHub', 'Jira', 'cPanel', 'Vercel', 'Netlify', 'Render', 'Chrome DevTools']
+    },
+    {
+      title: 'PMO & BUSINESS',
+      icon: <ClipboardList className="text-blue" />,
+      color: 'bg-white',
+      tapeColor: 'bg-blue/50',
+      rotation: -1,
+      skills: ['Agile', 'Scrum', 'Waterfall', 'Sprint Planning', 'Stakeholder Reporting', 'SEO']
     },
     {
       title: 'CURRENTLY LEARNING',
@@ -52,7 +60,7 @@ export default function Skills() {
       color: 'bg-white',
       tapeColor: 'bg-orange-400/50',
       rotation: 1,
-      skills: ['Express.js', 'System Design', 'AI Integration']
+      skills: ['System Design', 'AI Integration']
     }
   ];
 

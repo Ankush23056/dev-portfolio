@@ -32,7 +32,7 @@ export default function Hero() {
         </h1>
         
         <h2 className="text-2xl md:text-3xl font-bold text-ink/80">
-          Frontend Developer | React & JavaScript
+          Software Developer & PMO | React & JavaScript
         </h2>
         
         <div className="flex flex-col max-w-xl pt-2 pb-2 space-y-[-8px]">
@@ -42,7 +42,7 @@ export default function Hero() {
             className="bg-white border-2 border-ink shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] p-2 px-4 md:p-3 md:px-5 rotate-[-2deg] self-start relative z-10"
           >
             <p className="text-lg md:text-xl font-bold leading-tight">
-              I'm a developer who enjoys building products
+              I'm a developer and PMO who builds products
             </p>
           </motion.div>
           
@@ -112,7 +112,7 @@ export default function Hero() {
 
           {/* Badge */}
           <div className="absolute bottom-4 right-4 bg-green border-3 border-ink brutal-shadow px-4 py-2 font-black text-sm rotate-[-2deg] z-20">
-            Frontend Ninja
+            Dev + PMO
           </div>
         </div>
       </motion.div>

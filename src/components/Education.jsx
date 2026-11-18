@@ -5,7 +5,15 @@ import SectionHeading from './ui/SectionHeading';
 export default function Education() {
   const edu = [
     {
-      degree: 'B.Tech – Computer Science Engineering',
+      degree: 'MBA – Business Analytics',
+      school: "SVKM's NMIMS",
+      date: 'Aug 2026 – Present',
+      score: '',
+      color: 'bg-green',
+      rotation: 1
+    },
+    {
+      degree: 'B.Tech – Computer Engineering',
       school: 'University of Mumbai',
       date: 'Nov 2022 – July 2026',
       score: '',
@@ -34,7 +42,7 @@ export default function Education() {
     <section id="education" className="scroll-mt-32">
       <SectionHeading rotate="rotate-[2deg]">Education</SectionHeading>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {edu.map((item, idx) => (
           <motion.div
             key={item.degree}

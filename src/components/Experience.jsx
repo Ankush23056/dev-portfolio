@@ -3,10 +3,25 @@ import { motion } from 'motion/react';
 import BrutalCard from './ui/BrutalCard';
 import TechBadge from './ui/TechBadge';
 import SectionHeading from './ui/SectionHeading';
-import { Shield, Lock, EyeOff, FileSpreadsheet, Play, Check } from 'lucide-react';
+import SprintBoard from './SprintBoard';
+import { Shield, Lock, EyeOff, FileSpreadsheet, Play, Check, Globe, Search, Palette, ClipboardList } from 'lucide-react';
 
 export default function Experience() {
+  const sportsNextStack = ['HTML/CSS/JS', 'MySQL', 'Jira', 'SEO'];
   const stack = ['Next.js', 'React', 'Tailwind CSS'];
+
+  const sportsnextPoints = [
+    { icon: Globe, bg: 'bg-[#4DA6FF]', label: 'Websites & Admin Systems',
+      text: 'Built the Sports Promotion Group website end-to-end: public site, admin panel, enquiry management and a blog CMS with scheduled publishing.' },
+    { icon: Search, bg: 'bg-[#4ade80]', label: 'SEO Manager',
+      text: 'Automated SEO for the SportsNext Store: meta, URLs and alt text, Product Schema, XML sitemaps, Google Search Console API integration and an SEO dashboard.' },
+    { icon: Palette, bg: 'bg-[#FFD84D]', label: 'Tournament Platform UI',
+      text: 'Redesigning the viewer-facing frontend of a Tournament Management System into a luxury look and feel: live scoring, teams, players, fixtures and standings.' },
+    { icon: ClipboardList, bg: 'bg-[#FF6B6B]', label: 'PMO & Delivery',
+      text: 'Led sprint planning and 60+ Jira tickets across 8+ sprints for a 4-member team, with daily SOD/EOD reports, governance templates and stakeholder health reports.' },
+    { icon: Lock, bg: 'bg-[#c4b5fd]', label: 'Registration Closures',
+      text: 'Shipped UGSC and LESG registration closures, enforced server-side while preserving existing records and the eligible pending-user flow.' },
+  ];
   
   // Terminal log animation state
   const [visibleLogs, setVisibleLogs] = useState([]);
@@ -37,6 +52,94 @@ export default function Experience() {
   return (
     <section id="experience" className="scroll-mt-32">
       <SectionHeading rotate="rotate-[-1deg]">Experience</SectionHeading>
+
+      {/* SportsNext India Card */}
+      <motion.div
+        initial={{ opacity: 0, y: 60 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: '-80px' }}
+        transition={{ duration: 0.5, ease: 'easeOut' }}
+        className="mb-12"
+      >
+        <BrutalCard
+          rotation={0}
+          borderWidth="border-4"
+          className="bg-white !shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] hover:!shadow-[14px_14px_0px_0px_rgba(0,0,0,1)] transition-all duration-200"
+        >
+          <div className="flex flex-col lg:flex-row gap-8 items-stretch">
+            {/* LEFT: Sprint Board */}
+            <SprintBoard />
+
+            {/* RIGHT: Content */}
+            <div className="flex flex-col justify-between gap-6 flex-1">
+              <div className="space-y-3">
+                {/* Header */}
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                  <div>
+                    <h3 className="text-2xl sm:text-3xl font-black leading-tight text-ink">
+                      Software Engineer Intern
+                    </h3>
+                    <p className="text-xl font-bold text-[#4DA6FF] mt-0.5">@ SportsNext India</p>
+                  </div>
+
+                  {/* Badges Stack */}
+                  <div className="flex flex-wrap items-center gap-2">
+                    {/* Live pulsing date pill */}
+                    <span className="inline-flex items-center gap-2 bg-[#111111] text-[#4ade80] border-2 border-ink px-3 py-1 text-xs font-mono font-bold uppercase tracking-wider rounded-full shadow-[2px_2px_0px_#111111]">
+                      <span className="relative flex h-2 w-2">
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#4ade80] opacity-75"></span>
+                        <span className="relative inline-flex rounded-full h-2 w-2 bg-[#4ade80]"></span>
+                      </span>
+                      Sept 2026 – Present
+                    </span>
+
+                    {/* Highlight badge */}
+                    <span className="inline-flex items-center gap-1 bg-[#4ade80] border-2 border-ink shadow-[2px_2px_0px_#111111] px-3 py-1 text-xs font-black rounded-full text-ink">
+                      🧩 Dev + PMO
+                    </span>
+                  </div>
+                </div>
+
+                {/* Tagline */}
+                <p className="inline-block bg-[#FFD84D] border-2 border-ink px-3.5 py-1.5 font-bold text-base sm:text-lg leading-snug w-fit shadow-[2px_2px_0px_#111111] rotate-[-0.5deg]">
+                  "Building web products and keeping delivery on track."
+                </p>
+
+                {/* Bullets */}
+                <div className="space-y-4 pt-3">
+                  {sportsnextPoints.map((p) => (
+                    <div key={p.label} className="flex items-start gap-3">
+                      <div className={`${p.bg} border-2 border-ink p-1.5 rounded brutal-shadow-sm shrink-0`}>
+                        <p.icon size={16} className="text-ink" strokeWidth={3} />
+                      </div>
+                      <div>
+                        <span className="font-sans font-black text-sm uppercase tracking-wider text-ink block">
+                          {p.label}
+                        </span>
+                        <p className="font-medium text-ink/80 text-sm sm:text-base mt-0.5 leading-relaxed">
+                          {p.text}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Tech Stack */}
+              <div className="border-t-2 border-ink/10 pt-4 mt-2">
+                <span className="text-xs font-black uppercase tracking-wider text-ink/50 block mb-2">
+                  Internship Tech Stack
+                </span>
+                <div className="flex flex-wrap gap-2">
+                  {sportsNextStack.map((tech, i) => (
+                    <TechBadge key={tech} tech={tech} index={i} />
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </BrutalCard>
+      </motion.div>
 
       <motion.div
         initial={{ opacity: 0, y: 60 }}
@@ -104,13 +207,9 @@ export default function Experience() {
 
                   {/* Badges Stack */}
                   <div className="flex flex-wrap items-center gap-2">
-                    {/* Live System Uptime indicator */}
+                    {/* System Uptime indicator */}
                     <span className="inline-flex items-center gap-2 bg-[#111111] text-[#4ade80] border-2 border-ink px-3 py-1 text-xs font-mono font-bold uppercase tracking-wider rounded-full shadow-[2px_2px_0px_#111111]">
-                      <span className="relative flex h-2 w-2">
-                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#4ade80] opacity-75"></span>
-                        <span className="relative inline-flex rounded-full h-2 w-2 bg-[#4ade80]"></span>
-                      </span>
-                      May 2026 – Present
+                      May 2026 – Sept 2026
                     </span>
 
                     {/* Specialized highlight badge */}
