@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { motion } from 'motion/react';
 import { Play } from 'lucide-react';
 
@@ -24,20 +24,40 @@ const ticketStyle = [
 
 export default function SprintBoard() {
   const [stages, setStages] = useState(tickets.map(() => 0));
+  const [isVisible, setIsVisible] = useState(false);
+  const boardRef = useRef(null);
 
+  // Start animation only when ≥50% of the panel is on screen
   useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect(); // fire once; click-to-replay handles reruns
+        }
+      },
+      { threshold: 0.5 }
+    );
+    if (boardRef.current) observer.observe(boardRef.current);
+    return () => observer.disconnect();
+  }, []);
+
+  // Ticket animation — only ticks when visible
+  useEffect(() => {
+    if (!isVisible) return;
     const next = tickets.findIndex((t, i) => stages[i] < t.final);
     if (next === -1) return;
     const timer = setTimeout(() => {
       setStages(prev => prev.map((s, i) => (i === next ? s + 1 : s)));
     }, 650);
     return () => clearTimeout(timer);
-  }, [stages]);
+  }, [stages, isVisible]);
 
   const finished = tickets.every((t, i) => stages[i] === t.final);
 
   return (
     <div
+      ref={boardRef}
       onClick={() => setStages(tickets.map(() => 0))}
       title="Click to rerun the sprint"
       className="w-full lg:w-[38%] bg-[#111111] text-white border-3 border-ink brutal-shadow-sm rounded-lg relative overflow-hidden shrink-0 p-4 font-mono text-xs flex flex-col justify-between min-h-[310px] cursor-pointer group"

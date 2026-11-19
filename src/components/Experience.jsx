@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { motion } from 'motion/react';
 import BrutalCard from './ui/BrutalCard';
 import TechBadge from './ui/TechBadge';
@@ -7,7 +7,7 @@ import SprintBoard from './SprintBoard';
 import { Shield, Lock, EyeOff, FileSpreadsheet, Play, Check, Globe, Search, Palette, ClipboardList } from 'lucide-react';
 
 export default function Experience() {
-  const sportsNextStack = ['HTML/CSS/JS', 'MySQL', 'Jira', 'SEO'];
+  const sportsNextStack = ['HTML/CSS/JS','PHP', 'MySQL', 'Jira', 'SEO'];
   const stack = ['Next.js', 'React', 'Tailwind CSS'];
 
   const sportsnextPoints = [
@@ -25,6 +25,9 @@ export default function Experience() {
   
   // Terminal log animation state
   const [visibleLogs, setVisibleLogs] = useState([]);
+  const [easeHawkVisible, setEaseHawkVisible] = useState(false);
+  const easeHawkRef = useRef(null);
+
   const logs = [
     { text: '$ npm run auth:verify-rbac', color: 'text-white/60' },
     { text: '[INFO] Initiating MoxCRM Guard...', color: 'text-[#4DA6FF] font-bold' },
@@ -34,7 +37,24 @@ export default function Experience() {
     { text: '🛡️ Role Gate: SECURE & ACTIVE', color: 'text-[#111111] font-bold bg-[#4ade80] border border-[#4ade80] px-1.5 py-0.5 rounded w-fit shadow-[2px_2px_0px_#111111]' }
   ];
 
+  // Start animation only when ≥50% of the EaseHawk terminal panel is on screen
   useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setEaseHawkVisible(true);
+          observer.disconnect(); // fire once; click-to-replay handles reruns
+        }
+      },
+      { threshold: 0.5 }
+    );
+    if (easeHawkRef.current) observer.observe(easeHawkRef.current);
+    return () => observer.disconnect();
+  }, []);
+
+  // Log animation — only ticks when the terminal panel is visible
+  useEffect(() => {
+    if (!easeHawkVisible) return;
     let timer;
     if (visibleLogs.length < logs.length) {
       timer = setTimeout(() => {
@@ -42,7 +62,7 @@ export default function Experience() {
       }, 700);
     }
     return () => clearTimeout(timer);
-  }, [visibleLogs]);
+  }, [visibleLogs, easeHawkVisible]);
 
   // Restart logs preview on hover or click
   const restartLogs = () => {
@@ -155,6 +175,7 @@ export default function Experience() {
           <div className="flex flex-col lg:flex-row gap-8 items-stretch">
             {/* LEFT: Premium Visual Terminal */}
             <div 
+              ref={easeHawkRef}
               onClick={restartLogs}
               title="Click to rerun diagnostics log"
               className="w-full lg:w-[38%] bg-[#111111] text-[#4ade80] border-3 border-ink brutal-shadow-sm rounded-lg relative overflow-hidden shrink-0 p-4 font-mono text-xs flex flex-col justify-between min-h-[310px] cursor-pointer group"
